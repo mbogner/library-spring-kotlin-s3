@@ -14,10 +14,19 @@ group = mavenGroup
 dependencies {
     implementation(platform(libs.bom))
 
+    api("org.springframework.boot:spring-boot-starter")
+    api(libs.kotlin.logging)
+
+    api("software.amazon.awssdk:s3")
+    api(libs.jaxb.api)
+    api("commons-io:commons-io")
+
     // TEST ---------
-    testImplementation("org.assertj:assertj-core")
-    testImplementation("org.junit.jupiter:junit-jupiter-params")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("org.springframework.boot:spring-boot-testcontainers")
+    testImplementation("org.testcontainers:minio")
+    testImplementation("org.apache.httpcomponents.client5:httpclient5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

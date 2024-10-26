@@ -27,6 +27,15 @@ dependencyResolutionManagement {
             val bomVersion: String by System.getProperties()
             version("bom", bomVersion)
             library("bom", "dev.mbo", "spring-boot-bom").versionRef("bom")
+
+            val kotlinLoggingVersion: String by System.getProperties()
+            version("kotlin-logging", kotlinLoggingVersion)
+            library("kotlin-logging", "dev.mbo", "kotlin-logging")
+                .versionRef("kotlin-logging")
+
+            val jaxbApiVersion: String by System.getProperties()
+            version("jaxb-api", jaxbApiVersion)
+            library("jaxb-api", "javax.xml.bind", "jaxb-api").versionRef("jaxb-api")
         }
     }
 }

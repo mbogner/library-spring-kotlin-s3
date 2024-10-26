@@ -1,0 +1,11 @@
+aws:
+  enabled: true
+  credentials:
+    access-key: NONE
+    secret-key: NONE
+  s3:
+    region: eu-west-1
+    endpoint: NONE
+    custom: true
+    buckets-init: true
+    buckets: test1,test2
