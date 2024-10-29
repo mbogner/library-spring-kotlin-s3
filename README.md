@@ -15,10 +15,12 @@ Local:
 
 see `~/.m2/repository/dev/mbo/spring-kotlin-s3` for the created content
 
-Upload:
+Release:
 ```shell
-./gradlew clean signMavenPublication publishToMavenLocal publish
+./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
 ```
+
+By running this you don't need to use the web interface to close and release the library.
 
 see https://s01.oss.sonatype.org/content/groups/public/dev/mbo/
 

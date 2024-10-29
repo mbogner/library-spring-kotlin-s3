@@ -18,6 +18,9 @@ pluginManagement {
         kotlin("plugin.noarg") version kotlinVersion
         id("org.sonarqube") version sonarqubeVersion
         id("org.jetbrains.dokka") version dokkaVersion
+
+        val nexusPublishPluginVersion: String by System.getProperties()
+        id("io.github.gradle-nexus.publish-plugin") version nexusPublishPluginVersion
     }
 }
 
