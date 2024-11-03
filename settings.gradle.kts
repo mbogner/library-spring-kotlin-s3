@@ -21,6 +21,9 @@ pluginManagement {
 
         val nexusPublishPluginVersion: String by System.getProperties()
         id("io.github.gradle-nexus.publish-plugin") version nexusPublishPluginVersion
+
+        val gradleReleasePluginVersion: String by System.getProperties()
+        id("net.researchgate.release") version gradleReleasePluginVersion
     }
 }
 
