@@ -82,6 +82,15 @@ tasks {
         archiveClassifier.set("javadoc")
         from(named<org.jetbrains.dokka.gradle.DokkaTask>("dokkaJavadoc").get().outputDirectory)
     }
+
+    named("afterReleaseBuild") {
+        dependsOn(
+            "signMavenPublication",
+            "publishToMavenLocal",
+            "publishToSonatype",
+            "closeAndReleaseSonatypeStagingRepository"
+        )
+    }
 }
 
 sonarqube {
