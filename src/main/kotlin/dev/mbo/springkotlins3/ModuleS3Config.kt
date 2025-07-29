@@ -24,15 +24,15 @@ import java.net.URI
 @Configuration
 @ComponentScan(basePackageClasses = [ModuleS3Config::class])
 open class ModuleS3Config(
-    @Value("\${aws.credentials.access-key}")
+    @param:Value($$"${aws.credentials.access-key}")
     val accessKey: String,
-    @Value("\${aws.credentials.secret-key}")
+    @param:Value($$"${aws.credentials.secret-key}")
     val secretKey: String,
-    @Value("\${aws.s3.region}")
+    @param:Value($$"${aws.s3.region}")
     val awsRegion: String,
-    @Value("\${aws.s3.endpoint}")
+    @param:Value($$"${aws.s3.endpoint}")
     val endpoint: String,
-    @Value("\${aws.s3.custom:false}")
+    @param:Value($$"${aws.s3.custom:false}")
     val customConfigEnabled: Boolean,
 ) {
 

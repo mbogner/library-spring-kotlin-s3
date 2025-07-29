@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration
 @Configuration
 open class S3BucketInit(
     private val s3BucketAdmin: S3BucketAdministrator,
-    @Value("\${aws.s3.buckets:}")
+    @param:Value($$"${aws.s3.buckets:}")
     val bucketsCsv: String,
 ) {
 

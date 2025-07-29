@@ -12,7 +12,7 @@ import java.util.UUID
 @SpringBootTest(classes = [TestApplication::class])
 class S3BucketAdministratorTest @Autowired constructor(
     private val s3BucketAdministrator: S3BucketAdministrator,
-    @Value("\${aws.s3.buckets:}")
+    @param:Value($$"${aws.s3.buckets:}")
     val bucketsCsv: String,
 ) {
 
